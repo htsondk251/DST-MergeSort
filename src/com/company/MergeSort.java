@@ -1,6 +1,8 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MergeSort {
 	public int[] sort(int[] a) {
@@ -74,31 +76,21 @@ public class MergeSort {
 	return result;
   }
 
-  public static void main(String[] args) {
-//	MergeSort ms = new MergeSort();
-//	int[] initial = new int[] {12,10,15,6,2,7,8,1,3,9,5};
-//	System.out.println("Before sorted");
-//	System.out.println(Arrays.toString(initial));
-//	System.out.println("After sorted");
-//	int[] result = ms.StraightMergeSort(initial);
-//	System.out.println(Arrays.toString(result));
-
-	  int a = 5;
-	  int b = 9;
-	  //swap
-	  System.out.println("before swap: a=" + a + ", b=" + b);
-	  a = a - b;
-	  b = b + a;
-	  a = b - a;
-	  System.out.println("after swap: a=" + a + ", b=" + b);
-
-  }
-
-//  public static void swap(int a, int b) {
-//	  a = a - b;
-//	  b = b + a;
-//	  a = b - a;
-//  }
-
 	//todo: natural merge sort
+	/**
+	 * determine the natural sorted section
+	 */
+//	public List<Integer> determineSection(int[] a) {
+//  		List<Integer> indexes = new ArrayList<>();
+//		for (int i = 0; i < a.length-1; i++) {
+//			if (a[i] > a[i+1]) {
+//				indexes.add(i);
+//			}
+//		}
+//		return indexes;
+//	}
+
+//	public int[] mergeSectionsInNatural(int[] a, List<Integer> indexes) {
+//  		return null;
+//	}
 }
