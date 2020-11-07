@@ -25,6 +25,7 @@ public class MergeSort {
   /**
    * MergeSections: merge sections with length l (the last section can be shorter than l)	 *
    */
+  //todo: remove result in passing argument
   public int[] mergeSections(int[] a, int l, int[] result) {
 	int aLen = a.length;
 	int Q = aLen / (2*l);
@@ -46,6 +47,15 @@ public class MergeSort {
 	else {
 		mergeSectionBySection(a, l, S, a, R-l, S+l, result, S);
 	}
+	  //        Shallow copy (not OK)
+//        a = result.clone();
+//        a = Arrays.copyOf(result, aLen);
+//        a = result;
+
+//        Deep copy (OK)
+//	  for (int i = 0; i < result.length; i++) {
+//		  a[i] = result[i];
+//	  }
 	return result;
   }
 
